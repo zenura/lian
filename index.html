@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>doc</title>
+	<style>
+		body {
+			background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(lain.gif);
+			background-size: cover;
+			background-repeat: no-repeat;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			background-attachment: fixed;
+			background-position: center center;
+
+		}
+		.main-content{
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 90vh;
+		}
+		.anime-text{
+			text-align: center;
+			color: white;
+			font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			text-shadow: #454545 3px 3px;
+			margin: 0 auto;
+			font-size: 120px;
+			max-width: 600px;
+		}
+
+	</style>
+</head>
+<body onload="daktilo()">
+	<div class="main-content">
+		<h3 class="anime-text js-type-writer" id="hiText"> <br></h3>
+	</div>
+
+
+	<script>
+	var uzunluk = 0;
+	var yazi = "Hi! "+"              "+"......." + "Do you feel safe inside your house?";
+
+
+	function daktilo() {
+		if (uzunluk < yazi.length) {
+			setTimeout(daktilo, "50");
+			document.getElementById("hiText").innerHTML += yazi.charAt(uzunluk);
+			uzunluk++;
+
+
+		}
+		console.log(uzunluk);
+	}
+	</script>
+</body>
+</html>
